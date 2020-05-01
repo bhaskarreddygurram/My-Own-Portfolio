@@ -723,6 +723,18 @@ display: none;
     transform: translate(-20px);
     opacity: 0;
 }
+.portfolio .portfolio-item .portfolio-info h4 a
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px);
+    
+}
 .portfolio .portfolio-item-inner:hover .portfolio-info h4{
     -webkit-transform: translate(0px);
     transform: translate(0px);
@@ -832,6 +844,22 @@ padding: 40px 0 30px;
     color: #ffffff;
     font-weight: 400;
     z-index:1;
+}
+.lightbox .lightbox-content .lightbox-caption a{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    z-index:1;
+    
+
 }
 .lightbox .lightbox-controls .prev-item,
 .lightbox .lightbox-controls .next-item{
