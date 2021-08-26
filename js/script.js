@@ -9,15 +9,17 @@ window.addEventListener("load", function(){
 
 //portfolio Item filter
 const filterContainer= document.querySelector(".portfolio-filter"),
-      filterBtns = filterContainer.children;
+      filterBtns = filterContainer.children,
       totalFilterBtn =filterBtns.length,
       portfolioItems = document.querySelectorAll(".portfolio-item"),
       totalPortfolioItem = portfolioItems.length;
 
+console.log(portfolioItems);
+
       for(let i=0; i<totalFilterBtn; i++){
         filterBtns[i].addEventListener("click", function(){
             filterContainer.querySelector(".active").classList.remove("active");
-            this.classList.add("active")
+            this.classList.add("active");
 
             const filterValue=this.getAttribute("data-filter");
             for(let k=0; k<totalPortfolioItem; k++){
@@ -51,7 +53,7 @@ const filterContainer= document.querySelector(".portfolio-filter"),
                 itemIndex=i;
                 changeItem();
                 toggleLightbox();
-            })
+            });
         }
         function nextItem(){
             if(itemIndex===totalPortfolioItem-1){
@@ -77,6 +79,7 @@ const filterContainer= document.querySelector(".portfolio-filter"),
         }
         function changeItem(){
             imgSrc = portfolioItems[itemIndex].querySelector(".portfolio-img img").getAttribute("src");
+            console.log(imgSrc);
             lightboxImg.src=imgSrc;
             lightboxText.innerHTML=portfolioItems[itemIndex].querySelector("h4").innerHTML;
            // lightboxText.innerHTML=portfolioItems[itemIndex].querySelector("a").innerHTML;
@@ -87,7 +90,7 @@ const filterContainer= document.querySelector(".portfolio-filter"),
             if(event.target === lightboxClose || event.target === lightbox){
                 toggleLightbox();
             }
-        })
+        });
         //Aside Navbar
         const nav=document.querySelector(".nav"),
               navList=nav.querySelectorAll("li"),
